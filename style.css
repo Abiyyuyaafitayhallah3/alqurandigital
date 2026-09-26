@@ -1,231 +1,344 @@
 *{
-box-sizing:border-box;
+    box-sizing:border-box;
 }
-
 
 
 body{
 
-margin:0;
+    margin:0;
 
-font-family:
-"Segoe UI",
-Arial,
-sans-serif;
+    font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
 
+    min-height:100vh;
 
-background:
-
-linear-gradient(
-135deg,
-#064e3b,
-#0f766e
-);
+    color:white;
 
 
-color:#333;
-
-min-height:100vh;
-
-}
+    background-image:
+    url("assets/mosque.jpg");
 
 
-
-.ornament{
-
-position:fixed;
-
-inset:0;
-
-background-image:
-
-radial-gradient(
-rgba(212,175,55,.15) 2px,
-transparent 2px
-);
+    background-size:
+    cover;
 
 
-background-size:
-35px 35px;
+    background-position:
+    center;
 
 
-z-index:-1;
+    background-attachment:
+    fixed;
 
 }
 
 
 
 
-header{
+/* efek gelap tipis agar teks terbaca */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,0.25);
+
+    z-index:-1;
+
+}
 
 
-text-align:center;
 
-color:white;
+/* ======================
+   HOME
+====================== */
 
-padding:45px 20px;
+
+#home{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
 
 
-background:
 
-linear-gradient(
-180deg,
-rgba(0,0,0,.35),
-transparent
-);
+.hero{
+
+    padding:40px;
+
+    animation:
+    muncul 1s ease;
+
+}
+
+
+
+.logo-mushaf{
+
+    font-size:110px;
+
+    animation:
+    melayang 3s infinite;
+
+}
+
+
+
+.hero h1{
+
+    font-size:55px;
+
+    margin:15px 0;
+
+    text-shadow:
+    0 5px 20px black;
+
+}
+
+
+
+.hero p{
+
+    font-size:20px;
+
+    max-width:500px;
+
+    margin:auto;
+
+    text-shadow:
+    0 3px 10px black;
+
+}
+
+
+
+
+button{
+
+    margin-top:15px;
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:30px;
+
+
+    background:#d4af37;
+
+
+    color:#064e3b;
+
+
+    font-size:16px;
+
+    font-weight:bold;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+}
+
+
+
+button:hover{
+
+    transform:
+    translateY(-5px);
+
+
+    box-shadow:
+    0 10px 25px black;
+
+}
+
+
+
+
+/* ======================
+ DASHBOARD
+====================== */
+
+
+#dashboard{
+
+    padding:30px;
+
+}
+
+
+
+.welcome{
+
+    text-align:center;
+
+}
+
+
+
+.welcome h1{
+
+    font-size:35px;
+
+}
+
+
+
+
+.dashboard-grid{
+
+
+    max-width:1000px;
+
+    margin:30px auto;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+
+    gap:20px;
 
 
 }
 
 
 
-.moon{
 
-font-size:50px;
-
-color:#d4af37;
-
-}
+.dash-card{
 
 
-
-header h1{
-
-font-size:45px;
-
-margin:10px;
+    background:
+    rgba(253,246,227,.88);
 
 
-color:#fff;
-
-}
+    color:#064e3b;
 
 
-
-header p{
-
-font-size:18px;
-
-}
+    padding:30px;
 
 
+    border-radius:25px;
 
 
-nav{
+    text-align:center;
 
 
-display:flex;
+    border:
 
-justify-content:center;
+    2px solid #d4af37;
 
-gap:20px;
 
-padding:20px;
+    cursor:pointer;
+
+
+    transition:.4s;
+
+
+    backdrop-filter:
+    blur(8px);
 
 
 }
 
 
 
-nav button{
+.dash-card:hover{
 
 
-width:160px;
-
-height:90px;
-
-
-border-radius:20px;
+    transform:
+    translateY(-10px);
 
 
-border:
+    box-shadow:
 
-2px solid #d4af37;
-
-
-background:
-
-rgba(253,246,227,.95);
-
-
-color:#064e3b;
-
-
-font-size:18px;
-
-
-font-weight:bold;
-
-
-cursor:pointer;
-
-
-transition:.3s;
+    0 20px 40px rgba(0,0,0,.4);
 
 
 }
 
 
 
-nav button:hover{
+.dash-card div:first-child{
 
 
-transform:
-translateY(-8px);
-
-
-box-shadow:
-
-0 15px 30px
-rgba(0,0,0,.25);
+    font-size:50px;
 
 
 }
 
 
+
+
+/* ======================
+ CARD UTAMA
+====================== */
 
 
 .container{
 
+    max-width:950px;
 
-max-width:950px;
+    margin:auto;
 
-margin:auto;
-
-padding:20px;
+    padding:20px;
 
 
 }
 
 
 
-.card{
+
+.glass-card{
 
 
-background:
+    background:
 
-rgba(253,246,227,.95);
-
-
-border-radius:25px;
+    rgba(253,246,227,.9);
 
 
-padding:25px;
+    color:#064e3b;
 
 
-border:
-
-2px solid rgba(212,175,55,.6);
+    padding:25px;
 
 
-box-shadow:
+    border-radius:25px;
 
 
-0 15px 35px
-rgba(0,0,0,.25);
+    border:
+
+    2px solid #d4af37;
 
 
-margin-bottom:20px;
+    backdrop-filter:
+    blur(10px);
+
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,.3);
 
 
 }
@@ -236,135 +349,115 @@ margin-bottom:20px;
 select{
 
 
-width:100%;
+    width:100%;
 
 
-padding:15px;
+    padding:15px;
 
 
-border-radius:15px;
+    border-radius:15px;
 
 
-border:
+    border:
 
-2px solid #d4af37;
-
-
-font-size:16px;
+    2px solid #d4af37;
 
 
-background:white;
+    font-size:16px;
 
 
 }
 
 
+
+
+/* ======================
+ AYAT
+====================== */
 
 
 .ayat{
 
 
-background:
+    background:
 
-#fffaf0;
-
-
-border-radius:20px;
+    rgba(253,246,227,.95);
 
 
-padding:25px;
+    color:#064e3b;
 
 
-margin:20px 0;
+    margin:20px 0;
 
 
-border-left:
-
-5px solid #d4af37;
+    padding:25px;
 
 
-box-shadow:
+    border-radius:25px;
 
 
-0 8px 20px
-rgba(0,0,0,.12);
+    border-left:
+
+    5px solid #d4af37;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.2);
 
 
 }
+
 
 
 
 .arab{
 
 
-direction:rtl;
+    direction:rtl;
 
 
-text-align:right;
+    text-align:right;
 
 
-font-size:34px;
+    font-size:35px;
 
 
-line-height:2;
+    line-height:2;
 
 
-font-family:
+    font-family:
 
-"Traditional Arabic",
-serif;
-
-
-color:#064e3b;
+    "Traditional Arabic",
+    serif;
 
 
 }
 
 
+
+
+/* ======================
+ QUIZ
+====================== */
 
 
 .pilihan{
 
 
-display:block;
+    display:block;
 
 
-width:100%;
+    width:100%;
 
 
-margin:12px 0;
+    margin:12px 0;
 
 
-padding:15px;
+    background:#064e3b;
 
 
-border-radius:15px;
-
-
-border:none;
-
-
-background:#064e3b;
-
-
-color:white;
-
-
-cursor:pointer;
-
-
-transition:.3s;
-
-
-}
-
-
-
-
-.pilihan:hover{
-
-
-background:#047857;
+    color:white;
 
 
 }
@@ -374,16 +467,16 @@ background:#047857;
 .pilihan.arab{
 
 
-direction:rtl;
+    direction:rtl;
 
 
-text-align:right;
+    text-align:right;
 
 
-font-size:22px;
+    font-size:22px;
 
 
-line-height:1.8;
+    line-height:1.8;
 
 
 }
@@ -393,9 +486,7 @@ line-height:1.8;
 
 .benar{
 
-
-background:#15803d!important;
-
+    background:#16a34a!important;
 
 }
 
@@ -403,52 +494,69 @@ background:#15803d!important;
 
 .salah{
 
-
-background:#b91c1c!important;
-
+    background:#dc2626!important;
 
 }
 
-
-
-button{
-
-
-padding:12px 20px;
-
-
-border-radius:15px;
-
-
-border:none;
-
-
-background:#d4af37;
-
-
-color:#064e3b;
-
-
-font-weight:bold;
-
-
-cursor:pointer;
-
-
-margin:5px;
-
-
-}
 
 
 
 #score{
 
 
-color:#b8860b;
+    color:#b8860b;
 
 
-font-size:25px;
+}
+
+
+
+/* ======================
+ PROGRESS
+====================== */
+
+
+.progress{
+
+
+    width:100%;
+
+
+    height:15px;
+
+
+    background:#ddd;
+
+
+    border-radius:20px;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+#progressBar{
+
+
+    width:0%;
+
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #d4af37,
+    #047857
+    );
+
+
+    transition:1s;
 
 
 }
@@ -458,7 +566,83 @@ font-size:25px;
 
 .hidden{
 
-display:none;
+    display:none;
+
+}
+
+
+
+
+.fade-out{
+
+
+    animation:
+
+    keluar .8s forwards;
+
+
+}
+
+
+
+
+
+/* ======================
+ ANIMASI
+====================== */
+
+
+@keyframes melayang{
+
+
+    50%{
+
+        transform:
+        translateY(-15px);
+
+    }
+
+
+}
+
+
+
+@keyframes muncul{
+
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(40px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+    }
+
+
+}
+
+
+
+@keyframes keluar{
+
+
+    to{
+
+        opacity:0;
+
+        transform:
+        scale(.8);
+
+    }
+
 
 }
 
@@ -468,226 +652,33 @@ display:none;
 @media(max-width:600px){
 
 
-header h1{
+.hero h1{
 
-font-size:32px;
-
-}
-
-
-nav{
-
-flex-direction:column;
-
-align-items:center;
+    font-size:35px;
 
 }
 
 
-nav button{
+.logo-mushaf{
 
-width:90%;
+    font-size:80px;
 
 }
 
 
 .arab{
 
-font-size:24px;
+    font-size:25px;
 
 }
 
 
-}
-.hero{
+.dashboard-grid{
 
-text-align:center;
-
-color:white;
-
-padding:70px 20px;
+    grid-template-columns:
+    1fr;
 
 }
-
-
-
-.mushaf{
-
-font-size:90px;
-
-animation:
-
-float 3s infinite;
-
-}
-
-
-
-.mushaf.open{
-
-animation:
-
-openBook 1s forwards;
-
-}
-
-
-
-
-@keyframes float{
-
-50%{
-
-transform:translateY(-15px);
-
-}
-
-}
-
-
-
-@keyframes openBook{
-
-
-0%{
-
-transform:
-
-scale(1)
-rotateY(0);
-
-}
-
-
-100%{
-
-transform:
-
-scale(1.5)
-rotateY(180deg);
-
-
-opacity:0;
-
-
-}
-
-
-}
-header{
-
-text-align:center;
-
-color:white;
-
-padding:60px 20px;
-
-
-background:
-
-linear-gradient(
-to bottom,
-rgba(0,0,0,.45),
-transparent
-);
-
-
-}
-
-
-
-.card{
-
-background:
-
-rgba(253,246,227,.92);
-
-
-backdrop-filter:
-
-blur(8px);
-
-
-border-radius:25px;
-
-
-border:
-
-2px solid #d4af37;
-
-
-box-shadow:
-
-0 20px 40px rgba(0,0,0,.3);
-
-
-}
-body{
-
-margin:0;
-
-font-family:
-"Segoe UI",
-Arial,
-sans-serif;
-
-
-color:#333;
-
-min-height:100vh;
-
-
-background:
-
-linear-gradient(
-rgba(6,78,59,0.75),
-rgba(6,78,59,0.85)
-),
-
-url("assets/mosque.jpg");
-
-
-background-size:cover;
-
-background-position:center;
-
-background-attachment:fixed;
-
-
-}
-body{
-
-margin:0;
-
-font-family:
-"Segoe UI",
-Arial,
-sans-serif;
-
-
-color:#333;
-
-min-height:100vh;
-
-
-background-image:
-
-url("assets/mosque.jpg");
-
-
-background-size:
-
-cover;
-
-
-background-position:
-
-center;
-
-
-background-attachment:
-
-fixed;
 
 
 }

@@ -16,13 +16,18 @@
 <body>
 
 
-<div class="ornament"></div>
+<!-- HALAMAN DEPAN -->
+
+<section id="home">
 
 
-<header>
+<div class="hero">
 
-<div class="moon">
-☾
+
+<div class="logo-mushaf">
+
+📖
+
 </div>
 
 
@@ -32,49 +37,165 @@ Quran PESAT
 
 
 <p>
-Belajar Al-Qur'an dengan mudah & nyaman
+Belajar Al-Qur'an dengan mudah,
+nyaman, dan menyenangkan
 </p>
 
 
-</header>
+
+<button onclick="openApp()">
+
+Mulai Belajar
+
+</button>
 
 
 
-<nav>
+</div>
 
 
-<button onclick="showMenu('quran')">
 
+</section>
+
+
+
+
+
+<!-- DASHBOARD -->
+
+
+<section id="dashboard" class="hidden">
+
+
+<div class="welcome">
+
+
+<h1>
+Assalamu'alaikum 🌙
+</h1>
+
+
+<p>
+Selamat datang di Quran PESAT
+</p>
+
+
+</div>
+
+
+
+
+<div class="dashboard-grid">
+
+
+
+<div class="dash-card"
+onclick="showMenu('quran')">
+
+
+<div>
 📖
-<br>
+</div>
+
+
+<h3>
 Al-Qur'an
-
-</button>
-
+</h3>
 
 
-<button onclick="showMenu('mentor')">
+<p>
+Baca dan pelajari ayat
+</p>
 
+
+</div>
+
+
+
+
+
+<div class="dash-card"
+onclick="showMenu('mentor')">
+
+
+<div>
 🎯
-<br>
+</div>
+
+
+<h3>
 Murajaah
-
-</button>
-
-
-</nav>
+</h3>
 
 
+<p>
+Latihan hafalan Qur'an
+</p>
 
 
-<section id="quran" class="container">
+</div>
 
 
-<div class="card">
+
+
+
+<div class="dash-card">
+
+
+<div>
+⭐
+</div>
+
+
+<h3>
+Progress Hafalan
+</h3>
+
+
+
+<div class="progress">
+
+<div id="progressBar">
+
+</div>
+
+</div>
+
+
+<p id="progressText">
+0% selesai
+</p>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<!-- MENU AL QURAN -->
+
+
+<section id="quran" 
+class="container hidden">
+
+
+
+<div class="glass-card">
 
 
 <h2>
-📖 Daftar Surat
+🕌 Al-Qur'an
 </h2>
 
 
@@ -91,7 +212,9 @@ Pilih Surat
 
 
 
-<p id="status"></p>
+<p id="status">
+
+</p>
 
 
 </div>
@@ -109,10 +232,15 @@ Pilih Surat
 
 
 
-<section id="mentor" class="container hidden">
+
+<!-- MENU MURAJAAH -->
 
 
-<div class="card">
+<section id="mentor"
+class="container hidden">
+
+
+<div class="glass-card">
 
 
 <h2>
@@ -139,7 +267,6 @@ Sambung Ayat
 </option>
 
 
-
 </select>
 
 
@@ -157,12 +284,12 @@ Pilih surat terlebih dahulu
 
 
 
-
 <button onclick="nextQuestion()">
 
 Soal Berikutnya ➜
 
 </button>
+
 
 
 
@@ -174,6 +301,7 @@ Soal Berikutnya ➜
 
 
 
+
 <h3 id="score">
 
 ⭐ Skor : 0
@@ -181,10 +309,13 @@ Soal Berikutnya ➜
 </h3>
 
 
+
 </div>
 
 
+
 </section>
+
 
 
 
@@ -194,67 +325,3 @@ Soal Berikutnya ➜
 </body>
 
 </html>
-
-<section id="dashboard">
-
-
-<div class="hero">
-
-
-<div class="mushaf">
-
-📖
-
-</div>
-
-
-<h1>
-Quran PESAT
-</h1>
-
-
-<p>
-Teman belajar Al-Qur'an
-</p>
-
-
-
-<button onclick="openQuran()">
-
-Mulai Membaca
-
-</button>
-
-
-</div>
-
-
-
-<div class="dashboard-card">
-
-
-<h2>
-⭐ Progress Hafalan
-</h2>
-
-
-<div class="progress">
-
-<div id="progressBar">
-
-</div>
-
-</div>
-
-
-<p id="progressText">
-
-0%
-
-</p>
-
-
-</div>
-
-
-</section>

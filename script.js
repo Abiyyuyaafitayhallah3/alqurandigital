@@ -761,3 +761,28 @@ showMenu("quran");
 
 
 }
+function openApp(){
+
+let home =
+document.getElementById("home");
+
+
+home.classList.add("fade-out");
+
+
+setTimeout(()=>{
+
+
+home.style.display="none";
+
+
+document
+.getElementById("dashboard")
+.classList.remove("hidden");
+
+
+
+},800);
+
+
+}
