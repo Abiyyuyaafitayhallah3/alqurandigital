@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quran PESAT</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="ornament"></div>
+
+
+<header>
+
+<div class="moon">
+☾
+</div>
+
+
+<h1>
+Quran PESAT
+</h1>
+
+
+<p>
+Belajar Al-Qur'an dengan mudah & nyaman
+</p>
+
+
+</header>
+
+
+
+<nav>
+
+
+<button onclick="showMenu('quran')">
+
+📖
+<br>
+Al-Qur'an
+
+</button>
+
+
+
+<button onclick="showMenu('mentor')">
+
+🎯
+<br>
+Murajaah
+
+</button>
+
+
+</nav>
+
+
+
+
+<section id="quran" class="container">
+
+
+<div class="card">
+
+
+<h2>
+📖 Daftar Surat
+</h2>
+
+
+
+<select id="suratList">
+
+
+<option>
+Pilih Surat
+</option>
+
+
+</select>
+
+
+
+<p id="status"></p>
+
+
+</div>
+
+
+
+<div id="suratDetail"></div>
+
+
+
+</section>
+
+
+
+
+
+
+<section id="mentor" class="container hidden">
+
+
+<div class="card">
+
+
+<h2>
+🎯 Mentor Murajaah
+</h2>
+
+
+
+<select id="mode">
+
+
+<option value="tebak">
+
+Tebak Ayat
+
+</option>
+
+
+
+<option value="sambung">
+
+Sambung Ayat
+
+</option>
+
+
+
+</select>
+
+
+
+
+<div id="quizBox">
+
+
+<p>
+Pilih surat terlebih dahulu
+</p>
+
+
+</div>
+
+
+
+
+<button onclick="nextQuestion()">
+
+Soal Berikutnya ➜
+
+</button>
+
+
+
+<button onclick="restartQuiz()">
+
+🔄 Mulai Lagi
+
+</button>
+
+
+
+<h3 id="score">
+
+⭐ Skor : 0
+
+</h3>
+
+
+</div>
+
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
+
+<section id="dashboard">
+
+
+<div class="hero">
+
+
+<div class="mushaf">
+
+📖
+
+</div>
+
+
+<h1>
+Quran PESAT
+</h1>
+
+
+<p>
+Teman belajar Al-Qur'an
+</p>
+
+
+
+<button onclick="openQuran()">
+
+Mulai Membaca
+
+</button>
+
+
+</div>
+
+
+
+<div class="dashboard-card">
+
+
+<h2>
+⭐ Progress Hafalan
+</h2>
+
+
+<div class="progress">
+
+<div id="progressBar">
+
+</div>
+
+</div>
+
+
+<p id="progressText">
+
+0%
+
+</p>
+
+
+</div>
+
+
+</section>
